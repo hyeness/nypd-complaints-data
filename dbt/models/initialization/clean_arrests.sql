@@ -1,3 +1,4 @@
+{{ config(materialized='table' )}}
 SELECT 
     taxid, 
     COALESCE(arrest_count, 0) arrest_count, 

@@ -9,3 +9,4 @@ sources:
       - name: allegations
       - name: penalties
       - name: officers
+      - name: lawsuits
