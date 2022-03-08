@@ -1,0 +1,63 @@
+[2022-02-12 20:46:30,119] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: 1_load_initial_data.create_officers 2022-02-12T20:45:34.617768+00:00 [queued]>
+[2022-02-12 20:46:30,170] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: 1_load_initial_data.create_officers 2022-02-12T20:45:34.617768+00:00 [queued]>
+[2022-02-12 20:46:30,173] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-12 20:46:30,175] {taskinstance.py:881} INFO - Starting attempt 1 of 2
+[2022-02-12 20:46:30,177] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-12 20:46:30,220] {taskinstance.py:901} INFO - Executing <Task(PostgresOperator): create_officers> on 2022-02-12T20:45:34.617768+00:00
+[2022-02-12 20:46:30,230] {standard_task_runner.py:54} INFO - Started process 3724 to run task
+[2022-02-12 20:46:30,536] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', '1_load_initial_data', 'create_officers', '2022-02-12T20:45:34.617768+00:00', '--job_id', '12', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/load_data.py', '--cfg_path', '/tmp/tmpvtlzh6nz']
+[2022-02-12 20:46:30,549] {standard_task_runner.py:78} INFO - Job 12: Subtask create_officers
+[2022-02-12 20:46:30,747] {logging_mixin.py:112} INFO - Running <TaskInstance: 1_load_initial_data.create_officers 2022-02-12T20:45:34.617768+00:00 [running]> on host f261333f79b3
+[2022-02-12 20:46:30,864] {postgres_operator.py:62} INFO - Executing: 
+                      CREATE TABLE IF NOT EXISTS 
+                      dbt_raw_data.officers 
+                      (
+                        taxid integer, 
+                        full_name varchar(100), 
+                        first_name varchar (100), 
+                        last_name varchar (100),
+                        middle_initial varchar(5), 
+                        command varchar (100), 
+                        rank varchar(100), 
+                        shield_no int, 
+                        appt_date date, 
+                        recognition_count integer, 
+                        arrest_count integer, 
+                        ethnicity varchar(100),
+                        assignment_date date, 
+                        arrests_infr integer, 
+                        arrests_misd integer, 
+                        arrests_fel integer, 
+                        arrests_violation integer, 
+                        arrests_other integer
+                      );
+                      
+[2022-02-12 20:46:31,011] {base_hook.py:89} INFO - Using connection to: id: dbt_postgres_instance_raw_data. Host: postgres-dbt, Port: 5432, Schema: dbtdb, Login: dbtuser, Password: XXXXXXXX, extra: None
+[2022-02-12 20:46:31,075] {dbapi_hook.py:176} INFO - 
+                      CREATE TABLE IF NOT EXISTS 
+                      dbt_raw_data.officers 
+                      (
+                        taxid integer, 
+                        full_name varchar(100), 
+                        first_name varchar (100), 
+                        last_name varchar (100),
+                        middle_initial varchar(5), 
+                        command varchar (100), 
+                        rank varchar(100), 
+                        shield_no int, 
+                        appt_date date, 
+                        recognition_count integer, 
+                        arrest_count integer, 
+                        ethnicity varchar(100),
+                        assignment_date date, 
+                        arrests_infr integer, 
+                        arrests_misd integer, 
+                        arrests_fel integer, 
+                        arrests_violation integer, 
+                        arrests_other integer
+                      );
+                      
+[2022-02-12 20:46:31,161] {taskinstance.py:1070} INFO - Marking task as SUCCESS.dag_id=1_load_initial_data, task_id=create_officers, execution_date=20220212T204534, start_date=20220212T204630, end_date=20220212T204631
+[2022-02-12 20:46:35,117] {local_task_job.py:102} INFO - Task exited with return code 0

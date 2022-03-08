@@ -190,57 +190,53 @@ t13 = PostgresOperator(task_id='load_allegations',
                       dag=load_initial_data_dag)  
 
 
-# t14 = PostgresOperator(task_id='drop_table_order_products__prior',
-#                       sql="DROP TABLE IF EXISTS order_products__prior;",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)
+t14 = PostgresOperator(task_id='drop_table_lawsuits',
+                      sql="DROP TABLE IF EXISTS lawsuits;",
+                      postgres_conn_id='dbt_postgres_instance_raw_data',
+                      autocommit=True,
+                      database="dbtdb",
+                      dag=load_initial_data_dag)
 
-# t15 = PostgresOperator(task_id='create_order_products__prior',
-#                       sql="create table if not exists dbt_raw_data.order_products__prior(order_id integer, product_id integer, add_to_cart_order integer, reordered integer);",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)
+t15 = PostgresOperator(task_id='create_lawsuits',
+                      sql="""CREATE TABLE IF NOT EXISTS 
+                        dbt_raw_data.lawsuits(
+                        matter_name varchar(150), 
+                        plaintiff varchar(10000), 
+                        defendants varchar(100),
+                        tax_id varchar(20),
+                        represented_by varchar(60),
+                        lit_start date,
+                        disp_date date, 
+                        payout_amt float,
+                        disposition varchar(30), 
+                        docket_no varchar(20), 
+                        court varchar(50),
+                        use_of_force varchar(1),
+                        assault_battery varchar(1), 
+                        malicious_prosecution varchar(1),
+                        false_arrest varchar(1)
+                        );
+                        """,
+                      postgres_conn_id='dbt_postgres_instance_raw_data',
+                      autocommit=True,
+                      database="dbtdb",
+                      dag=load_initial_data_dag)
 
-# t16 = PostgresOperator(task_id='load_order_products__prior',
-#                       sql="""
-#                       COPY dbt_raw_data.order_products__prior 
-#                       FROM '/sample_data/order_products__prior.csv' 
-#                       DELIMITER ',' CSV HEADER;""",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)   
+t16 = PostgresOperator(task_id='load_lawsuits',
+                      sql="""
+                      COPY dbt_raw_data.lawsuits 
+                      FROM '/sample_data/lawsuits_history.csv' 
+                      DELIMITER ',' CSV HEADER;""",
+                      postgres_conn_id='dbt_postgres_instance_raw_data',
+                      autocommit=True,
+                      database="dbtdb",
+                      dag=load_initial_data_dag)   
 
-# t17 = PostgresOperator(task_id='drop_table_order_products__train',
-#                       sql="DROP TABLE IF EXISTS order_products__train;",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)
 
-# t18 = PostgresOperator(task_id='create_order_products__train',
-#                       sql="create table if not exists dbt_raw_data.order_products__train(order_id integer, product_id integer, add_to_cart_order integer, reordered integer);",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)
-
-# t19 = PostgresOperator(task_id='load_order_products__train',
-#                       sql="""
-#                       COPY dbt_raw_data.order_products__train 
-#                       FROM '/sample_data/order_products__train.csv' 
-#                       DELIMITER ',' CSV HEADER;""",
-#                       postgres_conn_id='dbt_postgres_instance_raw_data',
-#                       autocommit=True,
-#                       database="dbtdb",
-#                       dag=load_initial_data_dag)       
 
 t1 >> t2 >> t3 >> t4
 t1 >> t5 >> t6 >> t7
 t1 >> t8 >> t9 >> t10
 t1 >> t11 >> t12 >> t13
-# t1 >> t14 >> t15 >> t16
+t1 >> t14 >> t15 >> t16
 # t1 >> t17 >> t18 >> t19

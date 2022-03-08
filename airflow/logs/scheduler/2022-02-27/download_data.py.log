@@ -1,0 +1,52 @@
+[2022-02-27 00:46:49,746] {scheduler_job.py:155} INFO - Started process (PID=17339) to work on /airflow/dags/download_data.py
+[2022-02-27 00:46:49,764] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 00:46:49,767] {logging_mixin.py:112} INFO - [2022-02-27 00:46:49,767] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 00:47:03,316] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 00:47:03,416] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 00:47:03,509] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 00:47:03,532] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 13.787 seconds
+[2022-02-27 00:47:14,690] {scheduler_job.py:155} INFO - Started process (PID=17365) to work on /airflow/dags/download_data.py
+[2022-02-27 00:47:14,696] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 00:47:14,697] {logging_mixin.py:112} INFO - [2022-02-27 00:47:14,697] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 00:47:15,156] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 00:47:15,206] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 00:47:15,217] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 00:47:15,223] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 0.533 seconds
+[2022-02-27 01:43:29,101] {scheduler_job.py:155} INFO - Started process (PID=17391) to work on /airflow/dags/download_data.py
+[2022-02-27 01:43:29,117] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 01:43:29,119] {logging_mixin.py:112} INFO - [2022-02-27 01:43:29,119] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 01:43:30,769] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 01:43:30,817] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 01:43:30,824] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 01:43:30,829] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 1.729 seconds
+[2022-02-27 01:44:07,899] {scheduler_job.py:155} INFO - Started process (PID=17417) to work on /airflow/dags/download_data.py
+[2022-02-27 01:44:07,910] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 01:44:07,913] {logging_mixin.py:112} INFO - [2022-02-27 01:44:07,912] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 01:44:09,082] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 01:44:09,128] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 01:44:09,139] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 01:44:09,150] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 1.251 seconds
+[2022-02-27 01:44:26,670] {scheduler_job.py:155} INFO - Started process (PID=17444) to work on /airflow/dags/download_data.py
+[2022-02-27 01:44:26,681] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 01:44:26,683] {logging_mixin.py:112} INFO - [2022-02-27 01:44:26,683] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 01:44:27,145] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 01:44:27,192] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 01:44:27,198] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 01:44:27,202] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 0.532 seconds
+[2022-02-27 03:42:44,413] {scheduler_job.py:155} INFO - Started process (PID=17469) to work on /airflow/dags/download_data.py
+[2022-02-27 03:42:44,425] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 03:42:44,427] {logging_mixin.py:112} INFO - [2022-02-27 03:42:44,427] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 11:44:07,324] {scheduler_job.py:155} INFO - Started process (PID=17495) to work on /airflow/dags/download_data.py
+[2022-02-27 11:44:07,331] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 11:44:07,333] {logging_mixin.py:112} INFO - [2022-02-27 11:44:07,333] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 11:44:08,597] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 11:44:08,642] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 11:44:08,651] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 11:44:08,657] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 1.332 seconds
+[2022-02-27 13:45:27,384] {scheduler_job.py:155} INFO - Started process (PID=17520) to work on /airflow/dags/download_data.py
+[2022-02-27 13:45:27,390] {scheduler_job.py:1572} INFO - Processing file /airflow/dags/download_data.py for tasks to queue
+[2022-02-27 13:45:27,392] {logging_mixin.py:112} INFO - [2022-02-27 13:45:27,392] {dagbag.py:417} INFO - Filling up the DagBag from /airflow/dags/download_data.py
+[2022-02-27 13:45:28,383] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['0_download_data']) retrieved from /airflow/dags/download_data.py
+[2022-02-27 13:45:28,461] {scheduler_job.py:1288} INFO - Processing 0_download_data
+[2022-02-27 13:45:28,470] {scheduler_job.py:459} INFO - Skipping SLA check for <DAG: 0_download_data> because no tasks in DAG have SLAs
+[2022-02-27 13:45:28,476] {scheduler_job.py:163} INFO - Processing /airflow/dags/download_data.py took 1.092 seconds
